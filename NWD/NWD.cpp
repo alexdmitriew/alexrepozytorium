@@ -1,26 +1,26 @@
-﻿// algorytm wyznaczania liczb pierwszszych.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
+﻿// ConsoleApplication5.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
 //
 
 #include <iostream>
 using namespace std;
 
-
 int main()
 {
-    std::cout << "Ile liczb pirwszych chcesz wyswietlic?\n";
-    int n;
-    cin >> n;
-    // zrobic instrukcje if do  tego
-    for (int i = 2; i <= n; i++) 
-    {
-            if (n / n && n / 2)
-            cout << n;
+	int a, b;
+	cout << "Wprowadz liczbe pierwsza: ";
+	cin >> a;
+	cout << "Wprowadz liczbe druga: ";
+	cin >> b;
 
-            else cout << "zla liczba";
-
-    }
-
-
+	while (a != b)
+	{
+		if (a < b)
+			b = b - a;
+		else
+			a = a - b;
+	}
+	cout << "Najwiekszy wspolny dzielnik: ";
+	cout << a;
 
 }
 
